@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/back_button"
+            android:layout_margin="15dp"
+            android:src="@drawable/back_button"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/movie_image_IV"
+            android:layout_below="@id/back_button"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating_number_TV"
+            android:fontFamily="@font/movie_year_font"
+            android:layout_toStartOf="@id/rating_image_IV"
+            android:layout_alignBottom="@id/rating_image_IV"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/rating"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:layout_below="@id/movie_image_IV"
+            android:id="@+id/rating_image_IV"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/movies_description_font"
+            android:id="@+id/title_movie_TV"
+            android:layout_below="@id/rating_image_IV"
+
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/year_movie_TV"
+            android:layout_alignBottom="@id/rating_number_TV"
+            android:layout_toRightOf="@id/back_button"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/movie_year_font"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_movie_TV"
+            android:layout_margin="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:id="@+id/movie_description_TV"/>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/loading_animation_SK"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="#000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+</ScrollView>
